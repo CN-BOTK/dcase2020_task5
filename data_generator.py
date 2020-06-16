@@ -308,20 +308,20 @@ def train_data_augmentation(aug_loop_nums,aug_name_dict,root_audio_path,aug_path
 if __name__=="__main__":
     
     
-    annotation_path = '/home/dcase/c2020/dcase2020_task5/annotations.csv'
-    taxonomy_path = '/home/dcase/c2020/dcase2020_task5/dcase-ust-taxonomy.yaml'
-    audios_path = '/home/dcase/c2020/dcase2020_task5/audio'
-    test_audios_path = '/home/dcase/c2020/dcase2020_task5/audio-eval'
-    train_feature_path = '/home/dcase/c2020/BJS/2020dcase/task5/train/train_data/logmel_h'
+    annotation_path = '/annotations.csv'
+    taxonomy_path = '/dcase-ust-taxonomy.yaml'
+    audios_path = '/audio'
+    test_audios_path = '/audio-eval'
+    train_feature_path = '/logmel_h'
     # if not os.path.exists(train_feature_path):
     #     os.mkdir(train_feature_path)
-    # val_feature_path = '/home/dcase/c2020/BJS/2020dcase/task5/train/val_data/logmel_h'
+    # val_feature_path = '/logmel_h'
     # if not os.path.exists(val_feature_path):
     #     os.mkdir(val_feature_path)
-    test_feature_path = '/home/dcase/c2020/BJS/2020dcase/task5/test/test_data/log_mel_h'
+    test_feature_path = '/log_mel_h'
     if not os.path.exists(test_feature_path):
         os.mkdir(test_feature_path)
-    # train_one_class_dict_path = '/home/dcase/c2020/BJS/2020dcase/task5/label_csvs/train_coarse_one_class_dict.npy'
+    # train_one_class_dict_path = '/train_coarse_one_class_dict.npy'
     
     print("* Loading dataset.")
     annotation_data = pd.read_csv(annotation_path).sort_values('audio_filename')
@@ -379,11 +379,11 @@ if __name__=="__main__":
 
 
 ## aug wavs gen
-    # aug_name_dict_path = '/home/dcase/c2020/BJS/2020dcase/task5/label_csvs/aug_name_dict.npy'
+    # aug_name_dict_path = '/aug_name_dict.npy'
     # aug_loop_nums = 5000
     # aug_name_dict = np.load(aug_name_dict_path).item()
-    # root_audio_path = '/home/dcase/c2020/dcase2020_task5/audio'
-    # aug_path = '/home/dcase/c2020/BJS/2020dcase/task5/train/aug_wavs'
+    # root_audio_path = '/audio'
+    # aug_path = '/aug_wavs'
     
     # aug_file_label_dict = {}
     # aug_class = [1,2,3,5,7]
@@ -419,8 +419,8 @@ if __name__=="__main__":
     
     
     # aug train_data gen
-    # aug_fea_path = '/home/dcase/c2020/BJS/2020dcase/task5/train/aug_train_data/logmel_64'
-    # aug_wavs_path = '/home/dcase/c2020/BJS/2020dcase/task5/train/aug_train_wavs'
+    # aug_fea_path = '/logmel_64'
+    # aug_wavs_path = '/aug_train_wavs'
     # aug_wavs = os.listdir(aug_wavs_path)
     # for aug_wav_name in aug_wavs:
         
