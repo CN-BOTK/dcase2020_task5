@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Sun Apr 19 23:57:27 2020
-
 @author: dcase
 """
 
@@ -624,18 +622,18 @@ if __name__ == '__main__':
     os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2" 
     
     parser = argparse.ArgumentParser()
-    parser.add_argument("--annotation_path", default='/home/dcase/c2020/dcase2020_task5/annotations.csv')
-    parser.add_argument("--taxonomy_path",  default='/home/dcase/c2020/dcase2020_task5/dcase-ust-taxonomy.yaml')
-    parser.add_argument("--output_dir", type=str,default='/home/dcase/c2020/BJS/2020dcase/task5/train/models')
-    parser.add_argument("--train_feature_dir", type=str, default='/home/dcase/c2020/BJS/2020dcase/task5/train/train_data/logmel_64')
-    parser.add_argument("--val_feature_dir", type=str, default='/home/dcase/c2020/BJS/2020dcase/task5/train/val_data/logmel_64')
+    parser.add_argument("--annotation_path", default='~/annotations.csv')
+    parser.add_argument("--taxonomy_path",  default='~/dcase-ust-taxonomy.yaml')
+    parser.add_argument("--output_dir", type=str,default='~/models')
+    parser.add_argument("--train_feature_dir", type=str, default='~/logmel_64')
+    parser.add_argument("--val_feature_dir", type=str, default='~/logmel_64')
     parser.add_argument("--load_checkpoint_path", default='')
     
     parser.add_argument("--load_checkpoint", default=False)
     parser.add_argument("--chs", type=int, default=1)
     parser.add_argument("--kernel_size", type=int,default=3)
     parser.add_argument("--layer_depth", default=[64,128,256,256])
-    parser.add_argument("--exp_id", type=str, default='27')
+    parser.add_argument("--exp_id", type=str, default='1')
     parser.add_argument("--max_ckpt", type=int, default=20)
     parser.add_argument("--snapshot", type=int, default=1)
 
